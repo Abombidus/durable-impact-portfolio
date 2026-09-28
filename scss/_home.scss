@@ -1,0 +1,29 @@
+@mixin arrange($position) {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: $position;
+  text-align: $position;
+}
+
+.home {
+  @include arrange(center);
+  background:
+    linear-gradient(to right, rgba($color01, 0.9), rgba($color01, 0.3)),
+    url("../images/Me01.JPG") center top;
+  background-size: cover;
+
+  // .home-name
+  &-name {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid changeTextColor($color-black);
+
+    // .home-name-last
+    &-last {
+      color: $color02;
+      font-weight: fontWeight(bold);
+    }
+  }
+}

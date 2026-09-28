@@ -1,0 +1,34 @@
+@mixin arrange02($position) {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: $position;
+  text-align: $position;
+}
+
+.contact {
+  @include arrange02(center);
+  background:
+    linear-gradient(to right, rgba($color01, 0.9), rgba($color01, 0.3)),
+    url("../images/Me01.JPG") center top;
+  background-size: cover;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  // contact .contact-list
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    position: initial;
+    margin-top: 2rem;
+  }
+}

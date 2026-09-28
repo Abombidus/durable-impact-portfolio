@@ -1,0 +1,108 @@
+.project {
+  padding-bottom: 1rem;
+
+  //   .project-bio-image
+  &-bio-image {
+    height: 40vh;
+    width: 100%;
+    background:
+      linear-gradient(to right, rgba($color01, 0.9), rgba($color01, 0.3)),
+      url("../images/Me03.JPG") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    //   .project-bio-image .text-orange
+    .text-orange {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  //   .project-items
+  .project-items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    // padding: 1rem;
+    gap: 2rem;
+  }
+
+  //   .project-items >.item
+  &-item {
+    position: relative;
+    border-bottom: 5px solid $color02;
+    overflow: hidden;
+    cursor: pointer;
+
+    //   .project-items >.item img
+    & > img {
+      height: 50vh;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      width: 100%;
+      background: $color02;
+      opacity: 0;
+      @include transition;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  //   .project-items >.item .project-btn
+  &.project-btn {
+    color: red;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+  }
+  footer {
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+    transform: rotate(90deg) translateY(-120%);
+  }
+
+  @include mobile($mobile) {
+    .project-item > img {
+      height: 40vh;
+      width: 100%;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.6rem;
+      flex-direction: column;
+    }
+    footer {
+      // position: relative;
+      transform: rotate(90deg) translateY(-120%);
+    }
+  }
+}

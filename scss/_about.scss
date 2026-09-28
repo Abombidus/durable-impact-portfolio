@@ -1,0 +1,61 @@
+.about {
+  padding-bottom: 1rem;
+
+  //   .about-bio-image
+  &-bio-image {
+    height: 50vh;
+    width: 100%;
+    background:
+      linear-gradient(to right, rgba($color01, 0.9), rgba($color01, 0.3)),
+      url("../images/Me03.JPG") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    //   .about-bio-image p
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .about-bio
+  &-bio {
+    width: 80%;
+    text-align: center;
+
+    .text-orange {
+      padding-bottom: 1rem;
+    }
+  }
+
+  //   .about.jobs
+  .jobs {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  article {
+    background: rgb(65, 66, 65);
+    padding: 0.6rem;
+    border-bottom: 3px solid $color02;
+    border-radius: 0.4rem;
+  }
+
+  footer {
+    display: none;
+  }
+  @include mobile($mobile) {
+    .social-icons {
+      display: flex;
+      gap: 0.6rem;
+      flex-direction: column;
+    }
+  }
+}
