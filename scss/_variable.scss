@@ -13,13 +13,14 @@ $text-dimension: (
 );
 
 $text-orange: #ff652f;
+
 // Screen Dimension
 $mobile: 600px;
 $tablet: 1024px;
 
 @mixin showNav {
   .nav {
-    @include transition;
+    // @include transition;
     position: absolute;
     background: $color01;
     width: 40%;

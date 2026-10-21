@@ -7,7 +7,7 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  @include transition;
+  // @include transition;
 
   //   Media Query for burger Menu on mobile
   @include mobile($mobile) {
